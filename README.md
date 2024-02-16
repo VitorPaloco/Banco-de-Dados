@@ -27,29 +27,29 @@
   </ul>
   
   <h2>Exemplo de "SELECT"</h2>
- <p>
-+------------+--------------------+------------+----------------+--------+------------+<br>
-| IDEndereco | Rua                | Bairro     | Cidade         | Estado | ID_Cliente |<br>
-+------------+--------------------+------------+----------------+--------+------------+<br>
-|          1 | RUA ANTONIO SA     | CENTRO     | BELO HORIZONTE | MG     |          4 |<br>
-|          2 | RUA CAPITAO HERMES | CENTRO     | RIO DE JANEIRO | RJ     |          1 |<br>
-|          3 | RUA PRES VARGAS    | JARDINS    | SAO PAULO      | SP     |          3 |<br>
-|          4 | RUA ALFANDEGA      | ESTACIO    | RIO DE JANEIRO | RJ     |          2 |<br>
-|          5 | RUA DO OUVIDOR     | FLAMENGO   | RIO DE JANEIRO | RJ     |          6 |<br>
-|          6 | RUA URUGUAIANA     | CENTRO     | VITORIA        | ES     |          5 |<br>
-|          7 | RUA GUEDES         | CASCADURA  | BELO HORIZONTE | MG     |          9 |<br>
-|          8 | RUA MAIA LACERDA   | ESTACIO    | RIO DE JANEIRO | RJ     |         10 |<br>
-|          9 | RUA VISCONDESSA    | CENTRO     | RIO DE JANEIRO | RJ     |         11 |<br>
-|         10 | RUA NELSON MANDELA | COPACABANA | RIO DE JANEIRO | RJ     |         12 |<br>
-|         11 | RUA ARAUJO LIMA    | CENTRO     | VITORIA        | ES     |         13 |<br>
-|         12 | RUA CASTRO ALVES   | LEBLON     | RIO DE JANEIRO | RJ     |         14 |<br>
-|         13 | AV CAPITAO ANTUNES | CENTRO     | CURITIBA       | PR     |         15 |<br>
-|         14 | AV CARLOS BARROSO  | JARDINS    | SAO PAULO      | SP     |         16 |<br>
-|         15 | ALAMEDA SAMPAIO    | BOM RETIRO | CURITIBA       | PR     |         17 |<br>
-|         16 | RUA DA LAPA        | LAPA       | SAO PAULO      | SP     |         18 |<br>
-|         17 | RUA GERONIMO       | CENTRO     | RIO DE JANEIRO | RJ     |         19 |<br>
-+------------+--------------------+------------+----------------+--------+------------+<br>
-</p>
+ <pre>
++------------+--------------------+------------+----------------+--------+------------+
+| IDEndereco | Rua                | Bairro     | Cidade         | Estado | ID_Cliente |
++------------+--------------------+------------+----------------+--------+------------+
+|          1 | RUA ANTONIO SA     | CENTRO     | BELO HORIZONTE | MG     |          4 |
+|          2 | RUA CAPITAO HERMES | CENTRO     | RIO DE JANEIRO | RJ     |          1 |
+|          3 | RUA PRES VARGAS    | JARDINS    | SAO PAULO      | SP     |          3 |
+|          4 | RUA ALFANDEGA      | ESTACIO    | RIO DE JANEIRO | RJ     |          2 |
+|          5 | RUA DO OUVIDOR     | FLAMENGO   | RIO DE JANEIRO | RJ     |          6 |
+|          6 | RUA URUGUAIANA     | CENTRO     | VITORIA        | ES     |          5 |
+|          7 | RUA GUEDES         | CASCADURA  | BELO HORIZONTE | MG     |          9 |
+|          8 | RUA MAIA LACERDA   | ESTACIO    | RIO DE JANEIRO | RJ     |         10 |
+|          9 | RUA VISCONDESSA    | CENTRO     | RIO DE JANEIRO | RJ     |         11 |
+|         10 | RUA NELSON MANDELA | COPACABANA | RIO DE JANEIRO | RJ     |         12 |
+|         11 | RUA ARAUJO LIMA    | CENTRO     | VITORIA        | ES     |         13 |
+|         12 | RUA CASTRO ALVES   | LEBLON     | RIO DE JANEIRO | RJ     |         14 |
+|         13 | AV CAPITAO ANTUNES | CENTRO     | CURITIBA       | PR     |         15 |
+|         14 | AV CARLOS BARROSO  | JARDINS    | SAO PAULO      | SP     |         16 |
+|         15 | ALAMEDA SAMPAIO    | BOM RETIRO | CURITIBA       | PR     |         17 |
+|         16 | RUA DA LAPA        | LAPA       | SAO PAULO      | SP     |         18 |
+|         17 | RUA GERONIMO       | CENTRO     | RIO DE JANEIRO | RJ     |         19 |
++------------+--------------------+------------+----------------+--------+------------+
+</pre>
 
   
   <h2>Contato</h2>
