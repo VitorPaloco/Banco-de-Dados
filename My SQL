@@ -1,0 +1,330 @@
+ CREATE DATABASE Exercício3;
+ USE Exercício3;
+ 
+ CREATE TABLE Cliente(
+	IDCliente INT PRIMARY KEY AUTO_INCREMENT,
+	Nome VARCHAR(30) NOT NULL,
+	Sexo ENUM('M', 'F') NOT NULL,
+	Email VARCHAR(30) UNIQUE,
+	CPF VARCHAR(15) UNIQUE
+ );
+ 
+ CREATE TABLE Endereço(
+	IDEndereco INT PRIMARY KEY AUTO_INCREMENT,
+	Rua VARCHAR(30) NOT NULL,
+	Bairro VARCHAR(30) NOT NULL,
+	Cidade VARCHAR(30) NOT NULL,
+	Estado CHAR(2) NOT NULL,
+	ID_Cliente INT UNIQUE,
+	FOREIGN KEY(ID_Cliente)
+	REFERENCES Cliente(IDCliente)
+ );
+ 
+ CREATE TABLE Telefone(
+	IDTelefone INT PRIMARY KEY AUTO_INCREMENT,
+	Tipo ENUM('RES', 'COM', 'CEL') NOT NULL,
+	Numero VARCHAR(10) NOT NULL,
+	ID_Cliente INT,
+	FOREIGN KEY(ID_Cliente)
+	REFERENCES Cliente(IDCliente)
+ );
+
+ CREATE TABLE Produto(
+	IDProduto INT PRIMARY KEY AUTO_INCREMENT,
+	NomeProduto VARCHAR(30) NOT NULL,
+	Valor FLOAT(10,2) NOT NULL,
+	Peso FLOAT(10,2) NOT NULL,
+	Frete FLOAT(10,2) NOT NULL
+);
+
+INSERT INTO Cliente VALUES(NULL,'JOAO','M','JOAOA@IG.COM','485.325.000-05');
+INSERT INTO Cliente VALUES(NULL,'CARLOS','M','CARLOSA@IG.COM','660.988.610-56');
+INSERT INTO Cliente VALUES(NULL,'ANA','F','ANA@IG.COM','016.158.270-21');
+INSERT INTO Cliente VALUES(NULL,'CLARA','F',NULL,'302.856.570-62');
+INSERT INTO Cliente VALUES(NULL,'JORGE','M','JORGE@IG.COM','436.337.280-07');
+INSERT INTO Cliente VALUES(NULL,'CELIA','M','JCELIA@IG.COM','287.753.560-66');
+INSERT INTO CLIENTE VALUES(NULL,'FLAVIO','M','FLAVIO@IG.COM','790.250.280-47');
+INSERT INTO CLIENTE VALUES(NULL,'ANDRE','M','ANDRE@GLOBO.COM','125.537.660-09');
+INSERT INTO CLIENTE VALUES(NULL,'GIOVANA','F',NULL,'214.190.810-80');
+INSERT INTO CLIENTE VALUES(NULL,'KARLA','M','KARLA@GMAIL.COM','609.219.670-04');
+INSERT INTO CLIENTE VALUES(NULL,'DANIELE','M','DANIELE@GMAIL.COM','063.667.920-97');
+INSERT INTO CLIENTE VALUES(NULL,'LORENA','M',NULL,'524.982.240-17');
+INSERT INTO CLIENTE VALUES(NULL,'EDUARDO','M',NULL,'198.736.420-13');
+INSERT INTO CLIENTE VALUES(NULL,'ANTONIO','F','ANTONIO@IG.COM','507.775.430-60');
+INSERT INTO CLIENTE VALUES(NULL,'ANTONIO','M','ANTONIO@UOL.COM','285.726.920-02');
+INSERT INTO CLIENTE VALUES(NULL,'ELAINE','M','ELAINE@GLOBO.COM','578.402.860-03');
+INSERT INTO CLIENTE VALUES(NULL,'CARMEM','M','CARMEM@IG.COM','115.565.750-09');
+INSERT INTO CLIENTE VALUES(NULL,'ADRIANA','F','ADRIANA@GMAIL.COM','915.485.430-04');
+INSERT INTO CLIENTE VALUES(NULL,'JOICE','F','JOICE@GMAIL.COM','235.206.270-51');
+
+INSERT INTO Endereço VALUES(NULL,'RUA ANTONIO SA','CENTRO','BELO HORIZONTE','MG',4);
+INSERT INTO Endereço VALUES(NULL,'RUA CAPITAO HERMES','CENTRO','RIO DE JANEIRO','RJ',1);
+INSERT INTO Endereço VALUES(NULL,'RUA PRES VARGAS','JARDINS','SAO PAULO','SP',3);
+INSERT INTO Endereço VALUES(NULL,'RUA ALFANDEGA','ESTACIO','RIO DE JANEIRO','RJ',2);
+INSERT INTO Endereço VALUES(NULL,'RUA DO OUVIDOR','FLAMENGO','RIO DE JANEIRO','RJ',6);
+INSERT INTO Endereço VALUES(NULL,'RUA URUGUAIANA','CENTRO','VITORIA','ES',5);
+INSERT INTO Endereço VALUES(NULL,'RUA GUEDES','CASCADURA','BELO HORIZONTE','MG',9);
+INSERT INTO Endereço VALUES(NULL,'RUA MAIA LACERDA','ESTACIO','RIO DE JANEIRO','RJ',10);
+INSERT INTO Endereço VALUES(NULL,'RUA VISCONDESSA','CENTRO','RIO DE JANEIRO','RJ',11);
+INSERT INTO Endereço VALUES(NULL,'RUA NELSON MANDELA','COPACABANA','RIO DE JANEIRO','RJ',12);
+INSERT INTO Endereço VALUES(NULL,'RUA ARAUJO LIMA','CENTRO','VITORIA','ES',13);
+INSERT INTO Endereço VALUES(NULL,'RUA CASTRO ALVES','LEBLON','RIO DE JANEIRO','RJ',14);
+INSERT INTO Endereço VALUES(NULL,'AV CAPITAO ANTUNES','CENTRO','CURITIBA','PR',15);
+INSERT INTO Endereço VALUES(NULL,'AV CARLOS BARROSO','JARDINS','SAO PAULO','SP',16);
+INSERT INTO Endereço VALUES(NULL,'ALAMEDA SAMPAIO','BOM RETIRO','CURITIBA','PR',17);
+INSERT INTO Endereço VALUES(NULL,'RUA DA LAPA','LAPA','SAO PAULO','SP',18);
+INSERT INTO Endereço VALUES(NULL,'RUA GERONIMO','CENTRO','RIO DE JANEIRO','RJ',19);
+
+INSERT INTO Telefone VALUES(NULL,'CEL','3921-6833',5);
+INSERT INTO Telefone VALUES(NULL,'RES','8575-9445',5);
+INSERT INTO Telefone VALUES(NULL,'CEL','2448-2443',1);
+INSERT INTO Telefone VALUES(NULL,'COM','7532-2393',2);
+INSERT INTO Telefone VALUES(NULL,'RES','9972-4761',1);
+INSERT INTO Telefone VALUES(NULL,'CEL','7133-0562',3);
+INSERT INTO Telefone VALUES(NULL,'CEL','9654-2619',3);
+INSERT INTO Telefone VALUES(NULL,'COM','5585-2208',1);
+INSERT INTO Telefone VALUES(NULL,'RES','7421-8853',5);
+INSERT INTO Telefone VALUES(NULL,'CEL','8868-7909',2);
+INSERT INTO Telefone VALUES(NULL,'RES','6897-6565',9);
+INSERT INTO Telefone VALUES(NULL,'CEL','9965-6675',9);
+INSERT INTO Telefone VALUES(NULL,'CEL','3356-7765',11);
+INSERT INTO Telefone VALUES(NULL,'CEL','8866-8786',11);
+INSERT INTO Telefone VALUES(NULL,'COM','5568-9654',11);
+INSERT INTO Telefone VALUES(NULL,'COM','8868-7979',12);
+INSERT INTO Telefone VALUES(NULL,'COM','8896-5676',13);
+INSERT INTO Telefone VALUES(NULL,'CEL','8996-6809',15);
+INSERT INTO Telefone VALUES(NULL,'COM','8867-9978',16);
+INSERT INTO Telefone VALUES(NULL,'CEL','9965-5768',17);
+INSERT INTO Telefone VALUES(NULL,'RES','8995-5665',18);
+INSERT INTO Telefone VALUES(NULL,'RES','7745-5786',19);
+INSERT INTO Telefone VALUES(NULL,'RES','8976-6554',19);
+
+SELECT * FROM CLIENTE;
+
++-----------+---------+------+-------------------+----------------+
+| IDCliente | Nome    | Sexo | Email             | CPF            |
++-----------+---------+------+-------------------+----------------+
+|         1 | JOAO    | M    | JOAOA@IG.COM      | 485.325.000-05 |
+|         2 | CARLOS  | M    | CARLOSA@IG.COM    | 660.988.610-56 |
+|         3 | ANA     | F    | ANA@IG.COM        | 016.158.270-21 |
+|         4 | CLARA   | F    | NULL              | 302.856.570-62 |
+|         5 | JORGE   | M    | JORGE@IG.COM      | 436.337.280-07 |
+|         6 | CELIA   | M    | JCELIA@IG.COM     | 287.753.560-66 |
+|         7 | FLAVIO  | M    | FLAVIO@IG.COM     | 790.250.280-47 |
+|         8 | ANDRE   | M    | ANDRE@GLOBO.COM   | 125.537.660-09 |
+|         9 | GIOVANA | F    | NULL              | 214.190.810-80 |
+|        10 | KARLA   | M    | KARLA@GMAIL.COM   | 609.219.670-04 |
+|        11 | DANIELE | M    | DANIELE@GMAIL.COM | 063.667.920-97 |
+|        12 | LORENA  | M    | NULL              | 524.982.240-17 |
+|        13 | EDUARDO | M    | NULL              | 198.736.420-13 |
+|        14 | ANTONIO | F    | ANTONIO@IG.COM    | 507.775.430-60 |
+|        15 | ANTONIO | M    | ANTONIO@UOL.COM   | 285.726.920-02 |
+|        16 | ELAINE  | M    | ELAINE@GLOBO.COM  | 578.402.860-03 |
+|        17 | CARMEM  | M    | CARMEM@IG.COM     | 115.565.750-09 |
+|        18 | ADRIANA | F    | ADRIANA@GMAIL.COM | 915.485.430-04 |
+|        19 | JOICE   | F    | JOICE@GMAIL.COM   | 235.206.270-51 |
++-----------+---------+------+-------------------+----------------+
+
+SELECT * FROM CLIENTE
+WHERE IDCliente IN (6,10,11,12,15,17);
+
+UPDATE Cliente
+SET Sexo = 'F'
+WHERE IDCliente IN (6,10,11,12,17);
+
+UPDATE Cliente
+SET Sexo = 'M'
+WHERE IDCliente = 15;
+
++-----------+---------+------+-------------------+----------------+
+| IDCliente | Nome    | Sexo | Email             | CPF            |
++-----------+---------+------+-------------------+----------------+
+|         1 | JOAO    | M    | JOAOA@IG.COM      | 485.325.000-05 |
+|         2 | CARLOS  | M    | CARLOSA@IG.COM    | 660.988.610-56 |
+|         3 | ANA     | F    | ANA@IG.COM        | 016.158.270-21 |
+|         4 | CLARA   | F    | NULL              | 302.856.570-62 |
+|         5 | JORGE   | M    | JORGE@IG.COM      | 436.337.280-07 |
+|         6 | CELIA   | F    | JCELIA@IG.COM     | 287.753.560-66 |
+|         7 | FLAVIO  | M    | FLAVIO@IG.COM     | 790.250.280-47 |
+|         8 | ANDRE   | M    | ANDRE@GLOBO.COM   | 125.537.660-09 |
+|         9 | GIOVANA | F    | NULL              | 214.190.810-80 |
+|        10 | KARLA   | F    | KARLA@GMAIL.COM   | 609.219.670-04 |
+|        11 | DANIELE | F    | DANIELE@GMAIL.COM | 063.667.920-97 |
+|        12 | LORENA  | F    | NULL              | 524.982.240-17 |
+|        13 | EDUARDO | M    | NULL              | 198.736.420-13 |
+|        14 | ANTONIO | F    | ANTONIO@IG.COM    | 507.775.430-60 |
+|        15 | ANTONIO | M    | ANTONIO@UOL.COM   | 285.726.920-02 |
+|        16 | ELAINE  | M    | ELAINE@GLOBO.COM  | 578.402.860-03 |
+|        17 | CARMEM  | F    | CARMEM@IG.COM     | 115.565.750-09 |
+|        18 | ADRIANA | F    | ADRIANA@GMAIL.COM | 915.485.430-04 |
+|        19 | JOICE   | F    | JOICE@GMAIL.COM   | 235.206.270-51 |
++-----------+---------+------+-------------------+----------------+
+
+SELECT * FROM Endereço;
+
++------------+--------------------+------------+----------------+--------+------------+
+| IDEndereco | Rua                | Bairro     | Cidade         | Estado | ID_Cliente |
++------------+--------------------+------------+----------------+--------+------------+
+|          1 | RUA ANTONIO SA     | CENTRO     | BELO HORIZONTE | MG     |          4 |
+|          2 | RUA CAPITAO HERMES | CENTRO     | RIO DE JANEIRO | RJ     |          1 |
+|          3 | RUA PRES VARGAS    | JARDINS    | SAO PAULO      | SP     |          3 |
+|          4 | RUA ALFANDEGA      | ESTACIO    | RIO DE JANEIRO | RJ     |          2 |
+|          5 | RUA DO OUVIDOR     | FLAMENGO   | RIO DE JANEIRO | RJ     |          6 |
+|          6 | RUA URUGUAIANA     | CENTRO     | VITORIA        | ES     |          5 |
+|          7 | RUA GUEDES         | CASCADURA  | BELO HORIZONTE | MG     |          9 |
+|          8 | RUA MAIA LACERDA   | ESTACIO    | RIO DE JANEIRO | RJ     |         10 |
+|          9 | RUA VISCONDESSA    | CENTRO     | RIO DE JANEIRO | RJ     |         11 |
+|         10 | RUA NELSON MANDELA | COPACABANA | RIO DE JANEIRO | RJ     |         12 |
+|         11 | RUA ARAUJO LIMA    | CENTRO     | VITORIA        | ES     |         13 |
+|         12 | RUA CASTRO ALVES   | LEBLON     | RIO DE JANEIRO | RJ     |         14 |
+|         13 | AV CAPITAO ANTUNES | CENTRO     | CURITIBA       | PR     |         15 |
+|         14 | AV CARLOS BARROSO  | JARDINS    | SAO PAULO      | SP     |         16 |
+|         15 | ALAMEDA SAMPAIO    | BOM RETIRO | CURITIBA       | PR     |         17 |
+|         16 | RUA DA LAPA        | LAPA       | SAO PAULO      | SP     |         18 |
+|         17 | RUA GERONIMO       | CENTRO     | RIO DE JANEIRO | RJ     |         19 |
++------------+--------------------+------------+----------------+--------+------------+
+
+SELECT * FROM Telefone;
+
++------------+------+-----------+------------+
+| IDTelefone | Tipo | Numero    | ID_Cliente |
++------------+------+-----------+------------+
+|          1 | CEL  | 3921-6833 |          5 |
+|          2 | RES  | 8575-9445 |          5 |
+|          3 | CEL  | 2448-2443 |          1 |
+|          4 | COM  | 7532-2393 |          2 |
+|          5 | RES  | 9972-4761 |          1 |
+|          6 | CEL  | 7133-0562 |          3 |
+|          7 | CEL  | 9654-2619 |          3 |
+|          8 | COM  | 5585-2208 |          1 |
+|          9 | RES  | 7421-8853 |          5 |
+|         10 | CEL  | 8868-7909 |          2 |
+|         11 | RES  | 6897-6565 |          9 |
+|         12 | CEL  | 9965-6675 |          9 |
+|         13 | CEL  | 3356-7765 |         11 |
+|         14 | CEL  | 8866-8786 |         11 |
+|         15 | COM  | 5568-9654 |         11 |
+|         16 | COM  | 8868-7979 |         12 |
+|         17 | COM  | 8896-5676 |         13 |
+|         18 | CEL  | 8996-6809 |         15 |
+|         19 | COM  | 8867-9978 |         16 |
+|         20 | CEL  | 9965-5768 |         17 |
+|         21 | RES  | 8995-5665 |         18 |
+|         22 | RES  | 7745-5786 |         19 |
+|         23 | RES  | 8976-6554 |         19 |
++------------+------+-----------+------------+
+
+/* IFNULL */
+
+SELECT Nome, IFNULL(Email, '-------------') AS 'Email', CPF
+FROM Cliente;
+
+/* VIEW */
+
+CREATE VIEW V_Relatorio AS
+	SELECT C.Nome, C.Sexo, IFNULL(C.Email, '-------------') AS 'Email', C.CPF, 
+	   E.Rua, E.Bairro, E.Cidade, E.Estado,
+	   T.Tipo, T.Numero
+	FROM Cliente C 
+	INNER JOIN Endereço E
+	ON IDCliente = E.ID_Cliente
+	INNER JOIN Telefone T
+	ON IDCliente = T.ID_Cliente;
+
+SELECT * FROM V_Relatorio;
+
+SELECT Nome, Numero, Email, Estado
+FROM V_Relatorio;
+
+SELECT Nome FROM V_Relatorio
+WHERE Sexo = 'M';
+
+DROP VIEW V_Relatorio;
+
+/* RELATÓRIO GERAL */
+
+DESC Cliente;
+DESC Endereço;
+DESC Telefone;
+
+SELECT C.Nome, C.Sexo, IFNULL(C.Email, '-------------') AS 'Email', C.CPF, 
+	   E.Rua, E.Bairro, E.Cidade, E.Estado,
+	   T.Tipo, T.Numero
+FROM Cliente C
+	INNER JOIN Endereço E
+	ON IDCliente = E.ID_Cliente
+	INNER JOIN Telefone T
+	ON IDCliente = T.ID_Cliente;
+
+/* RELATÓRIO GERAL DOS HOMENS */
+
+SELECT C.Nome, C.Sexo, C.Email, C.CPF, 
+	   E.Rua, E.Bairro, E.Cidade, E.Estado,
+	   T.Tipo, T.Numero
+FROM Cliente C
+	INNER JOIN Endereço E
+	ON IDCliente = E.ID_Cliente
+	INNER JOIN Telefone T
+	ON IDCliente = T.ID_Cliente
+WHERE Sexo = 'M';
+
+/* RELATÓRIO GERAL DAS MULHERES */
+
+SELECT C.Nome, C.Sexo, C.Email, C.CPF, 
+	   E.Rua, E.Bairro, E.Cidade, E.Estado,
+	   T.Tipo, T.Numero
+FROM Cliente C
+	INNER JOIN Endereço E
+	ON IDCliente = E.ID_Cliente
+	INNER JOIN Telefone T
+	ON IDCliente = T.ID_Cliente
+WHERE Sexo = 'F';
+
+/* QUANTIDADE DE HOMENS E MULHERES */
+
+SELECT COUNT(*) AS Quantidade, Sexo
+FROM Cliente
+GROUP BY Sexo;
+
+/* ID E EMAIL DAS MULHERES DO CENTRO DE RJ E SEM TELEFONE 'CEL' */
+
+SELECT IDCliente, Email 
+FROM Cliente
+INNER JOIN Endereço E
+	ON IDCliente = E.ID_Cliente
+	INNER JOIN Telefone T
+	ON IDCliente = T.ID_Cliente
+WHERE Sexo = 'F' 
+	AND Bairro = 'Centro' AND Cidade = 'RJ' 
+	AND (Tipo ='RES' OR  Tipo = 'COM');
+
+/* PARA UMA CAMPANHA DE MARKETING, O SETOR SOLICITOU UM
+   RELATÓRIO COM O NOME, EMAIL E TELEFONE CELULAR 
+   DOS CLIENTES QUE MORAM NO ESTADO DO RIO DE JANEIRO 
+   VOCÊ TERÁ QUE PASSAR A QUERY PARA GERAR O RELATORIO PARA
+   O PROGRAMADOR */
+
+SELECT Nome, Email, Numero
+FROM Cliente
+INNER JOIN Endereço E
+	ON IDCliente = E.ID_Cliente
+	INNER JOIN Telefone T
+	ON IDCliente = T.ID_Cliente
+WHERE Estado = 'RJ'
+	AND Nome = 'CEL';
+
+/* PARA UMA CAMPANHA DE PRODUTOS DE BELEZA, O COMERCIAL SOLICITOU UM
+	RELATÓRIO COM O NOME, EMAIL E TELEFONE CELULAR 
+ 	DAS MULHERES QUE MORAM NO ESTADO DE SÃO PAULO 
+	VOCÊ TERÁ QUE PASSAR A QUERY PARA GERAR O RELATORIO PARA
+	O PROGRAMADOR */
+
+SELECT Nome, Email, Numero
+FROM Cliente
+INNER JOIN Endereço E
+	ON IDCliente = E.ID_Cliente
+	INNER JOIN Telefone T
+	ON IDCliente = T.ID_Cliente
+WHERE Sexo = 'F'
+	AND Estado = 'SP'
+	AND Tipo = 'CEL';
