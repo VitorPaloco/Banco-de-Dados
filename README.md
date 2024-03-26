@@ -5,28 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <h1>BANCO DE DADOS</h1>
+  <h1>SISTEMA DE GESTÃO ESCOLAR</h1>
   <h2>Descrição do Projeto</h2>
   <p>
-    A linguagem SQL é essencial para manipular e gerenciar bancos de dados de forma eficiente. Comandos como SELECT, INSERT,   
-    UPDATE e DELETE permitem extrair informações valiosas e realizar alterações nos dados conforme necessário. Estou dedicando          esforços para aprimorar minha habilidade nessa linguagem, reconhecendo sua importância fundamental no campo de banco de dados
+    O projeto, com foco no uso educacional para gestão escolar, trará um banco capaz de armazenar diversas informações. No banco de dados terá disponibilidade para incluir, alunos, professores e suas respectivas matérias, os dois indivíduos terão registrado seu número de telefone e endereço para fins de contato. Ainda nos alunos, haverá uma lista para chamadas, onde será listado todos os alunos presentes da turma, como a matéria da aula, e o professor responsável.
   </p>
 
   <h2>Recursos</h2>
   <ul>
       <li>Criação e Atualização de tabelas e seus atributos</li>
       <li>Inserção e visualização dos dados</li>
-      <li>Uso de "Views" para facilitar a visualização das tabelas</li>
       <li>Uso do "Join" para incrementar diferentes tabelas</li>
-      <li>Uso de diversas outras funções como: "WHERE", "OR & AND", "ORDER BY & GROUP BY" e "COUNT"</li>
+      <li>Uso de diversas outras funções como: "WHERE", "ORDER BY & GROUP BY", "COUNT", UNION, INNER JOIN, SUBQUERIES e entre outras</li>
   </ul>
 
   <h2>Tecnologias Utilizadas</h2>
   <ul>
-      <li>My SQL</li>
+      <li>MySQL</li>
+      <li>BRModelo</li>
   </ul>
   
-  <h2>Exemplo de "SELECT"</h2>
+  <h2>SELECTs</h2>
+
+ <p> a) Restrição (where) </p>
  <pre>
 +------------+--------------------+------------+----------------+--------+------------+
 | IDEndereco | Rua                | Bairro     | Cidade         | Estado | ID_Cliente |
