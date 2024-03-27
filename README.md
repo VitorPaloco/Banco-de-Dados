@@ -26,10 +26,10 @@
   </ul>
   
   <h2>Modelo Conceitual</h2>
-  <img src="Conceitual.png" alt="Modelo Conceitual">
+  <img src="Modelo Lógico e Conceitual/Conceitual.png" alt="Modelo Conceitual">
 
   <h2>Modelo Lógico</h2>
-  <img src="Logico.png" alt="Modelo Lógico">
+  <img src="Modelo Lógico e Conceitual/Logico.png" alt="Modelo Lógico">
 
   
   <h2>Contato</h2>
